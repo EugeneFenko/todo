@@ -1,2 +1,1 @@
 alert('Hi');
-alert;
