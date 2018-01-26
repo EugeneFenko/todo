@@ -1,0 +1,31 @@
+{
+  "name": "ToDo_JS",
+  "version": "1.0.0",
+  "description": "first javascript app (ES6 + Webpack + Babel)",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugeneFenko/toDo.git"
+  },
+  "keywords": [
+    "js",
+    "todo"
+  ],
+  "author": "EugeneFenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugeneFenko/toDo/issues"
+  },
+  "homepage": "https://github.com/EugeneFenko/toDo#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "webpack": "^3.10.0"
+  }
+}

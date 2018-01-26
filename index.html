@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JS | ToDo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body>
-    
-    <form>
-        <input id="field" type="text" value="">
-        <input id='add' type="submit" value="Add">
-        <input id="clr" type="button" value="Clear">
-    </form>
 
-    <div>
-        <ul>
-            <li>Item <i class="del">X</i></li>
-        </ul>
+<body>
+
+    <div class="container-fluid add">
+        <form action="">
+            <div class="row taskForm">
+                <div class="col-12 col-md-10 push-md-1 p-0">
+                    <input id="field" type="text" value="" placeholder="Add task..">
+                </div>
+                <div class="col-6 col-md-1 pull-md-10 p-0">
+                    <input type="button" value="Clear" class="btn btn-danger" id="clr">
+                </div>
+                <div class="col col-md-1 p-0">
+                    <input class="btn btn-info" type="button" id="add" value="Add">
+                </div>
+            </div>
+        </form>
     </div>
 
 
 
-    <script src="index.js"></script>
+
+    <div class="container itemContainer">
+        <div class="row">
+            <div class="col-12">
+                <ul class="exampleList">
+
+                </ul>
+                <ul class="itemList">
+                    <!-- place for your items -->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="dist/bundle.js"></script>
 </body>
+
 </html>
