@@ -67,7 +67,6 @@ field.addEventListener("focus", function (e) {
 
     li.appendChild(pen);     //add del icon
      example.appendChild(li);   //add item on list
-    
 
     e.preventDefault();
 });
