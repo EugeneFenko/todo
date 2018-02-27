@@ -5,27 +5,6 @@ let list = document.querySelector("ul.itemList");
 let example = document.querySelector('ul.exampleList');
 let form = document.querySelector('form');
 
-// function addItem(e) {
-//     const del = document.createElement('i');
-//     const li = document.createElement('li');
-//     const time = document.createElement('i');
-//     li.textContent = field.value;
-//     li.className = "itemLi";
-
-//     del.classList = 'fa fa-remove del';
-//     li.appendChild(del); //add del icon
-    
-//     time.classList = 'fa fa-clock-o addTime';
-//     li.appendChild(time);
-    
-//     if (field.value != "") {
-//         list.appendChild(li);   //add item on list
-//     }
-  
-//     field.value = '';
-//     e.preventDefault();
-// }
-
 function addItem(e) {
     const del = document.createElement('i');
     const li = document.createElement('li');
@@ -34,6 +13,7 @@ function addItem(e) {
     li.textContent = field.value;
     li.className = "itemLi";
 
+    // To page
     li.innerHTML = `
     <div class="itemVal">${field.value}</div>
     <div class="itemAttr">
@@ -44,12 +24,23 @@ function addItem(e) {
         <i class="fa fa-remove del"></i>
     </div>
     `;
+    // To localStorage
+   let tasks;
+   if(localStorage.getItem('tasks')===null){
+       tasks=[];
+   }else{
+       tasks=JSON.parse(localStorage.getItem('tasks'));
+   }
+   tasks.push(field.value);
+   localStorage.setItem('tasks',JSON.stringify(tasks));
    
     
+    // add
     if (field.value != "") {
         list.appendChild(li);   //add item on list
     }
-  
+
+    
     field.value = '';
     e.preventDefault();
 }
@@ -80,4 +71,5 @@ field.addEventListener('blur',function(){
     example.firstElementChild.remove();
 
 });
+
 
